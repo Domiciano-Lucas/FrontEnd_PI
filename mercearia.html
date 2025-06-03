@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercearia - Panificadora Boa Vista | Produtos de Qualidade em Guaratinguetá</title>
+    <meta name="description" content="Conheça nossa mercearia completa com laticínios, frios, bebidas, produtos de higiene e limpeza. Qualidade garantida desde 1996 na Panificadora Boa Vista.">
+    <meta name="keywords" content="mercearia, produtos alimentícios, laticínios, bebidas, higiene, limpeza, Guaratinguetá, padaria">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;500;600&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { /* Cores do seu tema */
+                        primary: '#8B5A2B',
+                        secondary: '#A67C52',
+                        light: '#f8f4e9',
+                        dark: '#2a241a',
+                    },
+                    fontFamily: { /* Fontes do seu tema */
+                        lora: ['Lora', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light text-gray-900 dark:bg-dark dark:text-light transition-colors duration-300 font-inter">
+
+    <div id="header-placeholder"></div>
+
+    <div id="nav-placeholder"></div>
+
+    <main>
+        <section id="mercearia-categorias" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-8 text-center text-primary dark:text-secondary">Nossa Mercearia Completa</h2>
+            
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-lg mb-6">Além de nossos deliciosos pães e doces, a Panificadora Boa Vista oferece uma vasta seleção de produtos de mercearia para atender todas as suas necessidades do dia a dia, com a qualidade e confiança que você já conhece.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary px-4 py-2 rounded-full text-sm font-medium">Produtos Frescos</span>
+                        <span class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary px-4 py-2 rounded-full text-sm font-medium">Marcas de Qualidade</span>
+                        <span class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary px-4 py-2 rounded-full text-sm font-medium">Preços Competitivos</span>
+                    </div>
+                </div>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+                    <div class="category-card bg-white dark:bg-dark rounded-xl p-6 shadow-md">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary p-3 rounded-full">
+                                <i class="fas fa-cheese text-xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary">Laticínios</h3>
+                        </div>
+                        <ul class="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Queijos variados (minas, prato, mussarela)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Iogurtes naturais e com sabores</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Requeijão cremoso e light</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Manteiga com e sem sal</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Leite integral, semi e desnatado</li>
+                        </ul>
+                        <button onclick="sendWhatsApp('Laticínios da Mercearia')" class="w-full mt-4 bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Pedir Laticínios
+                        </button>
+                    </div>
+
+                    <div class="category-card bg-white dark:bg-dark rounded-xl p-6 shadow-md">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary p-3 rounded-full">
+                                <i class="fas fa-drumstick-bite text-xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary">Frios e Embutidos</h3>
+                        </div>
+                        <ul class="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Presunto cozido e defumado</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Mortadela especial e tradicional</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Peito de peru e blanquet</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Salame italiano e hamburguês</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Queijos fatiados para lanches</li>
+                        </ul>
+                         <button onclick="sendWhatsApp('Frios e Embutidos')" class="w-full mt-4 bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Pedir Frios
+                        </button>
+                    </div>
+
+                    <div class="category-card bg-white dark:bg-dark rounded-xl p-6 shadow-md">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary p-3 rounded-full">
+                                <i class="fas fa-wine-bottle text-xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary">Bebidas</h3>
+                        </div>
+                        <ul class="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Refrigerantes (lata e garrafa)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Sucos naturais e de caixa</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Água mineral com e sem gás</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Cafés em pó e solúvel</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Chás diversos e achocolatados</li>
+                        </ul>
+                        <button onclick="sendWhatsApp('Bebidas da Mercearia')" class="w-full mt-4 bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Pedir Bebidas
+                        </button>
+                    </div>
+
+                    <div class="category-card bg-white dark:bg-dark rounded-xl p-6 shadow-md">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary p-3 rounded-full">
+                                <i class="fas fa-shopping-basket text-xl" aria-hidden="true"></i> </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary">Alimentos Básicos</h3>
+                        </div>
+                        <ul class="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Arroz, feijão, macarrão</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Açúcar, sal, farinhas</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Óleos, azeites e vinagres</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Molhos, temperos e condimentos</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Biscoitos, chocolates e doces</li>
+                        </ul>
+                        <button onclick="sendWhatsApp('Alimentos Básicos da Mercearia')" class="w-full mt-4 bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Pedir Alimentos
+                        </button>
+                    </div>
+
+                    <div class="category-card bg-white dark:bg-dark rounded-xl p-6 shadow-md">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary p-3 rounded-full">
+                                <i class="fas fa-pump-soap text-xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary">Higiene Pessoal</h3>
+                        </div>
+                        <ul class="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Sabonetes líquidos e em barra</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Shampoo e condicionador</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Papel higiênico e lenços</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Pasta de dente e escovas</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Desodorantes e absorventes</li>
+                        </ul>
+                         <button onclick="sendWhatsApp('Produtos de Higiene Pessoal')" class="w-full mt-4 bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Pedir Higiene
+                        </button>
+                    </div>
+
+                    <div class="category-card bg-white dark:bg-dark rounded-xl p-6 shadow-md">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary p-3 rounded-full">
+                                <i class="fas fa-spray-can-sparkles text-xl" aria-hidden="true"></i> </div>
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary">Limpeza Doméstica</h3>
+                        </div>
+                        <ul class="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Detergentes e lava-louças</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Desinfetantes e limpadores</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Sabão em pó e amaciantes</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Água sanitária e álcool</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-primary dark:text-secondary text-xs" aria-hidden="true"></i> Limpa vidros e multiuso</li>
+                        </ul>
+                        <button onclick="sendWhatsApp('Produtos de Limpeza Doméstica')" class="w-full mt-4 bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors text-sm flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Pedir Limpeza
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-primary bg-opacity-10 dark:bg-dark dark:bg-opacity-20 rounded-xl p-8 text-center border border-primary border-opacity-20 dark:border-secondary dark:border-opacity-20">
+                    <h3 class="text-2xl font-bold font-lora mb-4 text-primary dark:text-secondary">Tudo o que Você Precisa, em um Só Lugar!</h3>
+                    <p class="mb-6 max-w-2xl mx-auto">Nossa mercearia é pensada para sua conveniência. Trabalhamos com os melhores fornecedores para garantir produtos de qualidade e frescor todos os dias.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="contatos.html" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary font-medium transition-colors">
+                            <i class="fas fa-phone"></i> Fale Conosco
+                        </a>
+                        <a href="produtos.html" class="inline-block border-2 border-primary text-primary dark:text-light px-6 py-3 rounded-lg hover:bg-primary hover:text-white dark:hover:bg-secondary dark:hover:text-dark font-medium transition-colors">
+                            <i class="fas fa-bread-slice"></i> Conheça Nossos Pães
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="fixed bottom-24 right-4 md:right-8 bg-primary text-white w-12 h-12 p-3 rounded-full shadow-lg hover:bg-secondary transition-colors duration-300 z-50 flex items-center justify-center"
+            aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <button onclick="sendWhatsApp('Mercearia');"
+       class="whatsapp-btn bg-green-500 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600"
+       aria-label="Fale conosco no WhatsApp sobre a Mercearia">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

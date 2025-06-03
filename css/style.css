@@ -1,0 +1,260 @@
+/* css/style.css */
+/* Estilos customizados globais e específicos para componentes e páginas */
+
+/* --- Estilos Comuns / Utilitários (se necessário além do Tailwind) --- */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Estilos do Carrossel (da página index.html) --- */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    width: 100%;
+    height: 400px; /* Altura padrão para desktop */
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) { /* md breakpoint */
+    .carousel {
+        height: 300px; /* Altura para telas menores */
+    }
+}
+
+.carousel-item {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 1; /* Garante que o item ativo fique na frente */
+}
+
+.carousel-item img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain; /* Para garantir que a imagem inteira apareça sem cortes, mantendo proporção */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    padding: 1rem 1.5rem; /* py-4 px-6 */
+    color: white;
+    text-align: center;
+    z-index: 2; /* Legenda sobre a imagem */
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* rounded-full */
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* --- Estilos dos Cards de Produto (usado em index.html, produtos.html, mercearia.html) --- */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(248, 244, 233, 0.8); /* Cor 'light' com opacidade */
+    border: 1px solid rgba(139, 90, 43, 0.1); /* Borda sutil com cor primária */
+}
+.dark .product-card {
+    background-color: rgba(42, 36, 26, 0.8); /* Cor 'dark' com opacidade */
+    border-color: rgba(166, 124, 82, 0.1); /* Borda sutil com cor secundária */
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0,0,0,0.05); /* shadow-lg mais sutil */
+}
+
+/* --- Estilos dos Cards de Categoria (página mercearia.html) --- */
+.category-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(139, 90, 43, 0.2); /* Borda com cor primária mais visível */
+}
+.dark .category-card {
+    border-color: rgba(166, 124, 82, 0.2); /* Borda com cor secundária mais visível */
+}
+.category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+
+/* --- Estilos dos Cards de Contato (página contatos.html) --- */
+.contact-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(248, 244, 233, 0.8); /* Cor 'light' com opacidade */
+}
+.dark .contact-card {
+    background-color: rgba(42, 36, 26, 0.8); /* Cor 'dark' com opacidade */
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+/* --- Estilos da Timeline (página sobre.html) --- */
+.timeline-item {
+    position: relative;
+    padding-left: 2rem; /* Espaço para a linha e o ponto */
+    margin-bottom: 2rem;
+}
+/* Linha vertical da timeline */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0.4375rem; /* Centraliza a linha com o ponto ( (1rem - 2px) / 2 ) */
+    top: 0.5rem; /* Alinha com o topo do ponto */
+    bottom: -0.5rem; /* Estende um pouco abaixo do ponto para conectar visualmente */
+    width: 2px;
+    background-color: #8B5A2B; /* Cor primária */
+}
+.dark .timeline-item::before {
+    background-color: #A67C52; /* Cor secundária no modo escuro */
+}
+/* Ponto da timeline */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Alinha à esquerda para o padding-left fazer efeito */
+    top: 0.5rem; /* Posição vertical do ponto */
+    width: 1rem;  /* Tamanho do ponto */
+    height: 1rem; /* Tamanho do ponto */
+    border-radius: 50%;
+    background-color: #8B5A2B; /* Cor primária */
+    border: 2px solid #f8f4e9; /* Borda na cor 'light' para destacar do fundo */
+}
+.dark .timeline-item::after {
+    background-color: #A67C52; /* Cor secundária no modo escuro */
+    border-color: #2a241a; /* Borda na cor 'dark' */
+}
+/* Ajuste para o último item não ter a linha estendida */
+.timeline-item:last-child::before {
+    bottom: auto;
+    height: 0.5rem; /* Linha termina no ponto */
+}
+
+
+/* --- Estilos dos Cards de Valores (página sobre.html) --- */
+.value-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(139, 90, 43, 0.2);
+}
+.dark .value-card {
+    border-color: rgba(166, 124, 82, 0.2);
+}
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+/* --- Estilos do Botão Flutuante do WhatsApp --- */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99; /* Sobrepor outros elementos fixos de menor z-index */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* --- Estilos do Fundo do Cabeçalho (`header-bg`) --- */
+/* (Este estilo é aplicado via classe no header.html dentro do templates) */
+.header-bg {
+    background-image: url('../images/paoFrances.png'), url('../images/paoFrances.png'); /* Caminho relativo à pasta 'css' */
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+    background-size: 120px auto; /* Tamanho padrão para desktop */
+}
+
+/* --- Estilos dos Links de Navegação (`nav-link` e menu mobile) --- */
+/* (Estes estilos são aplicados aos links no nav.html dentro do templates) */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+/* Efeito hover sutil para links de navegação não ativos */
+.nav-link:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.nav-link.active { /* Link ativo na navegação */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos Responsivos para Navegação e Cabeçalho */
+@media (max-width: 640px) { /* sm breakpoint do Tailwind */
+    /* Ajuste do tamanho das imagens de fundo do cabeçalho em telas pequenas */
+    .header-bg {
+        background-size: 80px auto;
+    }
+
+    /* Estilos para o menu hambúrguer quando ativo (classe 'active' adicionada via JS) */
+    .nav-menu { 
+        display: none; /* Escondido por padrão em telas pequenas */
+        position: absolute;
+        top: 100%; /* Logo abaixo da barra de navegação */
+        left: 0;
+        right: 0;
+        background-color: #8B5A2B; /* Cor primária (ajuste se sua cor primária no Tailwind for outra) */
+        padding: 1rem;
+        z-index: 100; 
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active { /* Quando o menu está aberto */
+        display: flex; 
+        flex-direction: column;
+        gap: 1rem; /* Espaçamento entre os links */
+    }
+    /* Estilo para links dentro do menu mobile ativo */
+    .nav-menu.active .nav-link {
+        padding: 0.75rem 1rem; /* Aumentar um pouco o padding para toque */
+        text-align: center;
+    }
+    .nav-menu.active .nav-link.active { /* Link ativo dentro do menu mobile aberto */
+        background-color: rgba(255, 255, 255, 0.3); /* Destaque um pouco mais forte */
+    }
+}
+
+/* --- Estilos para filtro de produtos (produtos.html) --- */
+/* A classe 'active-filter' é adicionada/removida via JavaScript (setupProductFilters) */
+.filter-btn.active-filter { 
+    background-color: #8B5A2B; /* Cor primária */
+    color: white;
+    border-color: #8B5A2B; /* Garante que a borda também use a cor primária */
+}
+.dark .filter-btn.active-filter {
+    background-color: #A67C52; /* Cor secundária no dark mode */
+    color: #2a241a; /* Texto escuro para contraste com o fundo secundário */
+    border-color: #A67C52; /* Garante que a borda também use a cor secundária no dark mode */
+}

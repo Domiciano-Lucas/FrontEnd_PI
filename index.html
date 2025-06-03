@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panificadora Boa Vista - Pães Artesanais e Mercearia em Guaratinguetá</title>
+    <meta name="description" content="Padaria tradicional em Guaratinguetá com pães frescos, doces caseiros e mercearia completa. Atendemos desde 1996 com qualidade e sabor inigualáveis.">
+    <meta name="keywords" content="padaria, pães artesanais, doces caseiros, mercearia, Guaratinguetá, café da manhã">
+    <meta name="author" content="panificadoraboavista47@gmail.com">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;500;600&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { /* Cores do seu tema */
+                        primary: '#8B5A2B',
+                        secondary: '#A67C52',
+                        light: '#f8f4e9',
+                        dark: '#2a241a',
+                        current: '#6B4226', 
+                    },
+                    fontFamily: { /* Fontes do seu tema */
+                        lora: ['Lora', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light text-gray-900 dark:bg-dark dark:text-light transition-colors duration-300 font-inter">
+
+    <div id="header-placeholder"></div>
+
+    <div id="nav-placeholder"></div>
+
+    <main>
+        <section id="home-hero" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-lora mb-4 text-primary dark:text-secondary">Bem-vindo à Panificadora Boa Vista!</h2>
+                        <p class="text-lg md:text-xl mb-6">Desde 1996, oferecemos pães frescos, doces caseiros e uma variedade de produtos de mercearia para sua família.</p>
+                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                            <a href="produtos.html" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary font-medium flex items-center gap-2 transition-colors">
+                                <i class="fas fa-bread-slice"></i> Nossos Pães
+                            </a>
+                            <a href="mercearia.html" class="border-2 border-primary text-primary dark:border-secondary dark:text-light px-6 py-3 rounded-lg hover:bg-primary hover:text-white dark:hover:bg-secondary dark:hover:text-dark font-medium flex items-center gap-2 transition-colors">
+                                <i class="fas fa-shopping-basket"></i> Nossa Mercearia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 mt-8 md:mt-0">
+                        <img src="images/ProdutosdeMercearia.png"
+                             alt="Variedade de pães frescos e produtos de mercearia na Panificadora Boa Vista"
+                             class="w-full h-auto rounded-xl shadow-lg object-cover"
+                             loading="lazy"> </div>
+                </div>
+            </div>
+        </section> <section id="home-destaques" class="py-12 md:py-16 bg-primary bg-opacity-5 dark:bg-dark dark:bg-opacity-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-8 text-center text-primary dark:text-secondary">Nossos Destaques</h2>
+
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <img src="images/paoDeCreme.png" alt="Pão de creme fresquinho e delicioso" loading="lazy">
+                        <div class="carousel-caption">
+                            <h3 class="text-lg sm:text-xl md:text-2xl font-bold">Pão de Creme</h3>
+                            <p class="text-xs sm:text-sm md:text-base mt-1">Feito com produtos da mais alta qualidade direto para sua mesa.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/boloDeCoco.png" alt="Bolo de coco caseiro e fofinho" loading="lazy">
+                        <div class="carousel-caption">
+                            <h3 class="text-lg sm:text-xl md:text-2xl font-bold">Bolo Caseiro de Coco</h3>
+                            <p class="text-xs sm:text-sm md:text-base mt-1">Receitas tradicionais com aquele gostinho de feito em casa.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/paoDeQueijo.png" alt="Pão de queijo quentinho e saboroso" loading="lazy">
+                        <div class="carousel-caption">
+                            <h3 class="text-lg sm:text-xl md:text-2xl font-bold">Pão de Queijo Mineiro</h3>
+                            <p class="text-xs sm:text-sm md:text-base mt-1">O autêntico e irresistível pão de queijo da região.</p>
+                        </div>
+                    </div>
+                </div> <div class="flex justify-center items-center space-x-4 mt-6">
+                    <button onclick="changeSlide(-1)" class="bg-primary text-white w-10 h-10 md:w-12 md:h-12 rounded-full hover:bg-secondary flex items-center justify-center transition-colors" aria-label="Slide anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="showSlide(0)" class="carousel-indicator active" aria-label="Ir para slide 1"></button>
+                        <button onclick="showSlide(1)" class="carousel-indicator" aria-label="Ir para slide 2"></button>
+                        <button onclick="showSlide(2)" class="carousel-indicator" aria-label="Ir para slide 3"></button>
+                    </div>
+                    <button onclick="changeSlide(1)" class="bg-primary text-white w-10 h-10 md:w-12 md:h-12 rounded-full hover:bg-secondary flex items-center justify-center transition-colors" aria-label="Próximo slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div> </div>
+        </section> <section id="home-produtos" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-8 text-center text-primary dark:text-secondary">Delícias da Padaria</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="product-card rounded-xl overflow-hidden shadow-md">
+                        <img src="images/paoFrances.png" alt="Pão Francês tradicional da Panificadora Boa Vista" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6"> <h3 class="text-xl font-bold mb-2 text-primary dark:text-secondary">Pão Francês</h3>
+                            <p class="mb-4 text-sm">Crocante por fora, macio por dentro. Perfeito para começar o dia!</p>
+                            <button onclick="sendWhatsApp('Pão Francês')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card rounded-xl overflow-hidden shadow-md">
+                        <img src="images/boloDeChocolate.png" alt="Bolo de Chocolate caseiro e delicioso" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary dark:text-secondary">Bolo de Chocolate</h3>
+                            <p class="mb-4 text-sm">Feito com chocolate nobre e uma cobertura cremosa de dar água na boca.</p>
+                            <button onclick="sendWhatsApp('Bolo de Chocolate')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card rounded-xl overflow-hidden shadow-md">
+                        <img src="images/paoDeQueijo.png" alt="Pão de Queijo quentinho da Panificadora Boa Vista" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary dark:text-secondary">Pão de Queijo</h3>
+                            <p class="mb-4 text-sm">A receita tradicional mineira, com queijo de verdade. Impossível comer um só!</p>
+                            <button onclick="sendWhatsApp('Pão de Queijo')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div> <div class="text-center mt-8">
+                    <a href="produtos.html" class="inline-block bg-secondary text-white px-8 py-3 rounded-lg hover:bg-primary font-medium transition-colors">
+                        Ver Todos os Produtos
+                    </a>
+                </div>
+            </div>
+        </section> <section id="home-mercearia" class="py-12 md:py-16 bg-primary bg-opacity-5 dark:bg-dark dark:bg-opacity-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-8 text-center text-primary dark:text-secondary">Nossa Mercearia</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="product-card rounded-xl overflow-hidden shadow-md">
+                        <img src="images/graosCereais.png" alt="Grãos e cereais variados na mercearia" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary dark:text-secondary">Grãos e Cereais</h3>
+                            <p class="mb-4 text-sm">Tudo para sua dispensa, do café da manhã ao jantar.</p>
+                            <button onclick="sendWhatsApp('Grãos e Cereais da Mercearia')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card rounded-xl overflow-hidden shadow-md">
+                        <img src="images/enlatados.png" alt="Produtos enlatados e conservas" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary dark:text-secondary">Enlatados e Conservas</h3>
+                            <p class="mb-4 text-sm">Praticidade e qualidade em molhos, conservas e muito mais.</p>
+                            <button onclick="sendWhatsApp('Enlatados e Conservas')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card rounded-xl overflow-hidden shadow-md">
+                        <img src="images/bebidas.png" alt="Variedade de bebidas geladas e quentes" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary dark:text-secondary">Bebidas</h3>
+                            <p class="mb-4 text-sm">Refrigerantes, sucos, águas, cafés e chás para todos os gostos.</p>
+                            <button onclick="sendWhatsApp('Bebidas da Mercearia')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div> <div class="text-center mt-8">
+                    <a href="mercearia.html" class="inline-block bg-secondary text-white px-8 py-3 rounded-lg hover:bg-primary font-medium transition-colors">
+                        Conheça Nossa Mercearia
+                    </a>
+                </div>
+            </div>
+        </section> <section id="home-historia" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1"> <img src="images/padariaInterior.jpg"
+                             alt="Interior acolhedor da Panificadora Boa Vista"
+                             class="w-full h-auto max-h-[400px] object-cover rounded-xl shadow-lg"
+                             loading="lazy">
+                    </div>
+                    <div class="order-1 md:order-2 text-center md:text-left"> <h2 class="text-3xl md:text-4xl font-bold font-lora mb-6 text-primary dark:text-secondary">Mais de Duas Décadas de Tradição</h2>
+                        <p class="text-lg mb-4">Desde 1996, a Panificadora Boa Vista é um ponto de encontro em Guaratinguetá, servindo gerações com o mesmo carinho e dedicação.</p>
+                        <p class="text-lg mb-6">Nossa paixão é oferecer produtos frescos, feitos com ingredientes de qualidade, mantendo vivas as receitas que conquistaram nossa cidade.</p>
+                        <a href="sobre.html" class="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-secondary font-medium transition-colors">
+                            Conheça Nossa História
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section> <section id="home-horarios" class="py-12 md:py-16 bg-primary bg-opacity-5 dark:bg-dark dark:bg-opacity-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-8 text-primary dark:text-secondary">Estamos Esperando por Você!</h2>
+                <div class="max-w-md mx-auto bg-white dark:bg-dark rounded-xl shadow-md overflow-hidden border border-primary border-opacity-20 dark:border-secondary dark:border-opacity-20">
+                    <div class="p-8">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-700 mb-4">
+                            <span class="font-medium text-lg">Todos os dias</span>
+                            <span class="font-bold text-lg text-primary dark:text-secondary">6:30 - 22:30</span>
+                        </div>
+                        <p class="font-medium mb-2 text-primary dark:text-secondary">Venha nos visitar ou faça seu pedido!</p>
+                        <p class="text-sm">Abertos inclusive nos feriados para sua comodidade.</p>
+                        <div class="mt-6">
+                             <a href="contatos.html" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary font-medium transition-colors">
+                                <i class="fas fa-map-marker-alt"></i> Como Chegar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <section id="home-contato-cta" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <div class="bg-secondary text-white rounded-xl shadow-lg p-8 md:p-12 text-center">
+                    <h2 class="text-3xl font-bold font-lora mb-4">Pronto para Saborear?</h2>
+                    <p class="text-lg mb-6 max-w-xl mx-auto">Faça seu pedido pelo WhatsApp, ligue para nós ou venha nos visitar. Estamos ansiosos para atendê-lo!</p>
+                    <div class="flex flex-wrap justify-center items-center gap-4">
+                        <button onclick="sendWhatsApp('Gostaria de fazer um pedido')" class="bg-white text-primary px-6 py-3 rounded-lg hover:bg-gray-100 font-medium flex items-center gap-2 transition-colors">
+                            <i class="fab fa-whatsapp"></i> Pedir Agora
+                        </button>
+                        <a href="tel:+551231331600" class="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-secondary font-medium flex items-center gap-2 transition-colors">
+                            <i class="fas fa-phone"></i> Ligar (12) 3133-1600
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section> </main> <div id="footer-placeholder"></div>
+
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="fixed bottom-24 right-4 md:right-8 bg-primary text-white w-12 h-12 p-3 rounded-full shadow-lg hover:bg-secondary transition-colors duration-300 z-50 flex items-center justify-center"
+            aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <button onclick="sendWhatsApp('Contato Flutuante: Home');"
+       class="whatsapp-btn bg-green-500 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

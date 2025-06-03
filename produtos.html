@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Panificadora Boa Vista | Pães, Doces e Salgados Frescos</title>
+    <meta name="description" content="Conheça nossos deliciosos pães, doces e salgados frescos. Panificadora Boa Vista em Guaratinguetá, qualidade desde 1996.">
+    <meta name="keywords" content="pães artesanais, doces caseiros, salgados, padaria, Guaratinguetá">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;500;600&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { /* Cores do seu tema */
+                        primary: '#8B5A2B',
+                        secondary: '#A67C52',
+                        light: '#f8f4e9',
+                        dark: '#2a241a',
+                    },
+                    fontFamily: { /* Fontes do seu tema */
+                        lora: ['Lora', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light text-gray-900 dark:bg-dark dark:text-light transition-colors duration-300 font-inter">
+
+    <div id="header-placeholder"></div>
+
+    <div id="nav-placeholder"></div>
+
+    <main>
+        <section id="produtos-lista" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-8 text-center text-primary dark:text-secondary">Nossos Produtos Frescos</h2>
+            
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-lg mb-6">Todos os nossos produtos são feitos artesanalmente com ingredientes selecionados, seguindo receitas tradicionais que mantemos desde 1996.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary px-4 py-2 rounded-full text-sm font-medium">Feitos diariamente</span>
+                        <span class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary px-4 py-2 rounded-full text-sm font-medium">Ingredientes naturais</span>
+                        <span class="bg-primary bg-opacity-10 dark:bg-secondary dark:bg-opacity-20 text-primary dark:text-secondary px-4 py-2 rounded-full text-sm font-medium">Sabor inigualável</span>
+                    </div>
+                </div>
+            
+                <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
+                    <button class="filter-btn bg-white dark:bg-dark border border-primary text-primary dark:text-light px-4 py-2 rounded-lg text-sm sm:text-base" data-category="all">Todos</button>
+                    <button class="filter-btn bg-white dark:bg-dark border border-primary text-primary dark:text-light px-4 py-2 rounded-lg text-sm sm:text-base" data-category="paes">Pães</button>
+                    <button class="filter-btn bg-white dark:bg-dark border border-primary text-primary dark:text-light px-4 py-2 rounded-lg text-sm sm:text-base" data-category="doces">Doces</button>
+                    <button class="filter-btn bg-white dark:bg-dark border border-primary text-primary dark:text-light px-4 py-2 rounded-lg text-sm sm:text-base" data-category="salgados">Salgados</button>
+                </div>
+            
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <div class="product-card rounded-xl overflow-hidden shadow-md category-paes">
+                        <img src="images/paoFrances.png" alt="Pão Francês crocante da Panificadora Boa Vista" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary mb-2">Pão Francês</h3>
+                            <p class="text-sm mb-4">Nosso tradicional pão francês, crocante por fora e macio por dentro, feito com fermentação natural.</p>
+                            <button onclick="sendWhatsApp('Pão Francês')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card rounded-xl overflow-hidden shadow-md category-paes">
+                        <img src="images/paoDeForma.png" alt="Pão de Forma integral e caseiro" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary mb-2">Pão de Forma Integral</h3>
+                            <p class="text-sm mb-4">Pão de forma integral, macio e nutritivo, perfeito para sanduíches saudáveis e saborosos.</p>
+                            <button onclick="sendWhatsApp('Pão de Forma Integral')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card rounded-xl overflow-hidden shadow-md category-doces">
+                        <img src="images/paoDoce.png" alt="Pão Doce tradicional com cobertura açucarada" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary mb-2">Pão Doce Tradicional</h3>
+                            <p class="text-sm mb-4">Delicioso pão doce tradicional, com massa fofinha e uma generosa cobertura açucarada.</p>
+                            <button onclick="sendWhatsApp('Pão Doce Tradicional')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card rounded-xl overflow-hidden shadow-md category-doces">
+                        <img src="images/paoDeCreme.png" alt="Pão de Creme recheado e saboroso" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary mb-2">Pão de Creme</h3>
+                            <p class="text-sm mb-4">Nosso famoso pão com uma irresistível cobertura de creme pasteleiro, uma explosão de sabor.</p>
+                            <button onclick="sendWhatsApp('Pão de Creme')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card rounded-xl overflow-hidden shadow-md category-doces">
+                        <img src="images/boloDeCoco.png" alt="Bolo de Coco caseiro, fofinho e molhadinho" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary mb-2">Bolo de Coco Caseiro</h3>
+                            <p class="text-sm mb-4">Bolo fofinho com sabor intenso de coco, coberto com coco ralado fresco. Perfeito para o café!</p>
+                            <button onclick="sendWhatsApp('Bolo de Coco Caseiro')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card rounded-xl overflow-hidden shadow-md category-doces">
+                        <img src="images/boloDeLaranja.png" alt="Bolo de Laranja caseiro com receita da vovó" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary mb-2">Bolo de Laranja da Vovó</h3>
+                            <p class="text-sm mb-4">Bolo caseiro de laranja, com sabor cítrico refrescante e aquele aroma irresistível de infância.</p>
+                            <button onclick="sendWhatsApp('Bolo de Laranja da Vovó')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir agora
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card rounded-xl overflow-hidden shadow-md category-doces">
+                        <img src="images/boloDeChocolate.png" alt="Bolo de Chocolate intenso e cremoso" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary mb-2">Bolo de Chocolate Intenso</h3>
+                            <p class="text-sm mb-4">Para os amantes de chocolate: massa escura e úmida, com cobertura generosa.</p>
+                            <button onclick="sendWhatsApp('Bolo de Chocolate Intenso')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card rounded-xl overflow-hidden shadow-md category-salgados">
+                        <img src="images/coxinha.png" alt="Coxinha crocante e cremosa com recheio de frango" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary mb-2">Coxinha Cremosa</h3>
+                            <p class="text-sm mb-4">Nossa coxinha é crocante por fora e super cremosa por dentro, recheada com frango desfiado e temperado.</p>
+                            <button onclick="sendWhatsApp('Coxinha Cremosa')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir agora
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card rounded-xl overflow-hidden shadow-md category-paes category-salgados"> <img src="images/paoDeQueijo.png" alt="Pão de Queijo Mineiro autêntico" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-primary dark:text-secondary mb-2">Pão de Queijo Mineiro</h3>
+                            <p class="text-sm mb-4">O verdadeiro pão de queijo, feito com polvilho de qualidade e muito queijo!</p>
+                            <button onclick="sendWhatsApp('Pão de Queijo Mineiro')" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary font-medium transition-colors flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Pedir agora
+                            </button>
+                        </div>
+                    </div>
+                </div> </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="fixed bottom-24 right-4 md:right-8 bg-primary text-white w-12 h-12 p-3 rounded-full shadow-lg hover:bg-secondary transition-colors duration-300 z-50 flex items-center justify-center"
+            aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <button onclick="sendWhatsApp('Produtos');"
+       class="whatsapp-btn bg-green-500 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600"
+       aria-label="Fale conosco no WhatsApp sobre Produtos">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
