@@ -138,7 +138,7 @@ function sendWhatsApp(productOrContext = "") {
     const phoneNumber = "551231331600"; 
     let message = "Olá! Gostaria de mais informações.";
     if (productOrContext) {
-        message = `Olá! Tenho interesse em: ${productOrContext}.`;
+        message = ` ${productOrContext}.`;
     }
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
